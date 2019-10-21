@@ -1,0 +1,14 @@
+Assumptions from my side for execution:
+1) The API file name has been assumed to be API_JSON.json and another file with  API_JSON.json.bkup exists in system previously.
+2) Printing the messages to console output related to JSON modifications.
+3) My scripts and JSON file exist in same path. [Enhancement: Json location can be changed and validated, by changing the json paths from current directory search to os.walk search across all directories in my file_compare.py script]
+
+Prerequisites required:
+pip install watchdog
+
+How to Execute the Script:
+On Terminal run the below command:
+python python monitor_file_changes.py <Path>
+
+-->Path argument is optional, if not specified it searches for any json modifications from "." directory structure.
+--> If we modify our API_JSON contents, automatically the monitor script communicates to file_compare.py to validate and print the changes to console output.
